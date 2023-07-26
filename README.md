@@ -1,65 +1,88 @@
-# Phase 1 Project
+# Microsoft Movie Studio Project
 
-You've made it all the way through the first phase of this course - take a minute to celebrate your awesomeness!
+## Overview
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project/master/awesome.gif)
+This project aims to assist Microsoft in establishing its new movie studio by exploring trends in the movie industry to make informed decisions. The business problem is to determine what types of films are currently performing best at the box office. The analysis is conducted using a dataset containing information on movie genres, production budgets, release dates, runtime, cast, directors, and box office gross earnings.
 
-Now you will put your new skills to use with a large end-of-Phase project! This project should take 20 to 30 hours to complete.
+## Data
 
-## Project Overview
+The dataset used in this project contains comprehensive information about various movies, including their genres, production budgets, release dates, runtime, cast, directors, and box office earnings (domestic and worldwide). The data was collected over the last decade and provides a wide range of variables to analyze and extract insights.
 
-For this project, you will use exploratory data analysis to generate insights for a business stakeholder.
+## Methods
 
-### Business Problem
+The analysis involves data exploration, visualization, and statistical analysis. The primary questions considered are:
 
-Microsoft sees all the big companies creating original video content and they want to get in on the fun. They have decided to create a new movie studio, but they don’t know anything about creating movies. You are charged with exploring what types of films are currently doing the best at the box office. You must then translate those findings into actionable insights that the head of Microsoft's new movie studio can use to help decide what type of films to create.
+1. What genres are currently the most profitable?
+2. How does the budget of a movie relate to its box office performance?
+3. How does the time of release influence a movie's success?
+4. What are the trends in movie runtime and their impact on box office returns?
+5. What impact does the cast and director have on a movie's success?
 
-### The Data
+## Results
 
-In the folder `zippedData` are movie datasets from:
+Based on the analysis, several actionable insights have been uncovered:
 
-* [Box Office Mojo](https://www.boxofficemojo.com/)
-* [IMDB](https://www.imdb.com/)
-* [Rotten Tomatoes](https://www.rottentomatoes.com/)
-* [TheMovieDB](https://www.themoviedb.org/)
-* [The Numbers](https://www.the-numbers.com/)
+1. **Top 5 Most Profitable Genres:** Action, Adventure, Sci-Fi, and Adventure, Animation, Comedy are the most profitable genres in the last decade, generating substantial box office earnings.
 
-It is up to you to decide what data from this to use and how to use it. If you want to make this more challenging, you can scrape websites or make API calls to get additional data. If you are feeling overwhelmed or behind (e.g. struggled with the Phase 1 Code Challenge), we recommend you use only the following data files:
+Top 5 most profitable genres in the last 10 years:
 
-* imdb.title.basics
-* imdb.title.ratings
-* bom.movie_gross
+| Genres                        | Profit               |
+|-------------------------------|----------------------|
+| Action, Adventure, Sci-Fi     | $7,408,407,000,000.00 |
+| Adventure, Animation, Comedy  | $6,141,670,000,000.00 |
+| Action, Adventure, Fantasy    | $2,541,036,000,000.00 |
+| Action, Adventure, Comedy     | $2,504,744,000,000.00 |
+| Action, Crime, Thriller       | $1,286,476,000,000.00 |
 
-## Deliverables
+Genres with the highest average profitability:
 
-There are three deliverables for this project:
+| Genres                         | Average Profit      |
+|--------------------------------|---------------------|
+| Adventure, Drama, Sport        | $1,122,500,000.00   |
+| Fantasy, Romance               | $1,122,500,000.00   |
+| Biography, Documentary, History| $679,200,000.00     |
+| Family                         | $679,200,000.00     |
+| Documentary, Drama, Sport      | $671,100,000.00     |
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
+2. **Budget and Box Office Performance:** A strong positive correlation exists between the production budget and both domestic and worldwide box office earnings. Higher production budgets tend to result in higher box office returns.
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
+![Budget and Box Office Performance](plots/budget(2).png)
 
-### Key Points
+3. **Release Timing:** Movies released during the Summer and Spring seasons tend to have the highest average gross earnings, making strategic release timing critical for success.
 
-* **Your analysis should yield three concrete business recommendations.** The ultimate purpose of exploratory analysis is not just to learn about the data, but to help an organization perform better. Explicitly relate your findings to business needs by recommending actions that you think the business (Microsoft) should take.
+![Release Timing](plots/seasons.png)
 
-* **Communicating about your work well is extremely important.** Your ability to provide value to an organization - or to land a job there - is directly reliant on your ability to communicate with them about what you have done and why it is valuable. Create a storyline your audience (the head of Microsoft's new movie studio) can follow by walking them through the steps of your process, highlighting the most important points and skipping over the rest.
+4. **Runtime Impact:** Movies with longer runtimes, especially in the (150, 180] minutes interval, tend to achieve higher average domestic and worldwide gross earnings.
 
-* **Use plenty of visualizations.** Visualizations are invaluable for exploring your data and making your findings accessible to a non-technical audience. Spotlight visuals in your presentation, but only ones that relate directly to your recommendations. Simple visuals are usually best (e.g. bar charts and line graphs), and don't forget to format them well (e.g. labels, titles).
+![Runtime Impact](plots/runtime.png)
 
-## Getting Started
+5. **Talent Influence:** Collaborating with recognizable and successful actors, directors, and crew members can enhance a movie's appeal and contribute to higher box office earnings.
 
-Please start by reviewing this assignment, the rubric at the bottom of it, and the "Project Submission & Review" page. If you have any questions, please ask your instructor ASAP.
+| primary_name          | domestic_gross | worldwide_gross |
+|-----------------------|----------------|-----------------|
+| Joe Robert Cole       | $700,100,000.0 | $1,348,300,000.0 |
+| Judy Greer            | $652,300,000.0 | $1,648,900,000.0 |
+| Ty Simpkins           | $652,300,000.0 | $1,648,900,000.0 |
+| Craig T. Nelson       | $608,600,000.0 | $1,242,500,000.0 |
+| Erik Smitt            | $608,600,000.0 | $1,242,500,000.0 |
+| Huck Milner           | $608,600,000.0 | $1,242,500,000.0 |
+| John Walker           | $608,600,000.0 | $1,242,500,000.0 |
+| Mahyar Abousaeedi     | $608,600,000.0 | $1,242,500,000.0 |
+| Nicole Paradis Grindle| $608,600,000.0 | $1,242,500,000.0 |
+| Sarah Vowell          | $608,600,000.0 | $1,242,500,000.0 |
 
-Next, we recommend you check out [the Phase 1 Project Templates and Examples repo](https://github.com/learn-co-curriculum/dsc-project-template) and use the MVP template for your project.
+## Recommendations
 
-Alternatively, you can fork [the Phase 1 Project Repository](https://github.com/learn-co-curriculum/dsc-phase-1-project), clone it locally, and work in the `student.ipynb` file. Make sure to also add and commit a PDF of your presentation to your repository with a file name of `presentation.pdf`.
+Based on the findings, the following recommendations are proposed for Microsoft's new movie studio:
 
-## Project Submission and Review
+1. **Invest in Profitable Genres:** Focus on producing action, adventure, sci-fi, and adventure, animation, comedy movies to increase the chances of financial success.
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
+2. **Allocate Adequate Budget:** Ensure that movies receive sufficient production budget to maintain high quality, marketing efforts, and talent acquisition.
 
-## Summary
+3. **Strategically Time Releases:** Plan movie releases during the Summer and Spring seasons for the best chance of achieving high box office earnings.
 
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+4. **Explore Longer Runtimes:** Consider producing movies with runtimes in the (150, 180] minutes interval to potentially increase average gross earnings.
+
+5. **Attract Recognizable Talent:** Collaborate with well-known actors, directors, and crew members to enhance the appeal of movies and attract audiences.
+
+By incorporating these insights and recommendations, Microsoft's new movie studio can position itself for success in the competitive movie industry and create engaging and financially successful films.
